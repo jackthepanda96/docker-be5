@@ -60,10 +60,10 @@ func initConfig() *AppConfig {
 	defaultConfig.Username = ""
 	defaultConfig.Password = ""
 
-	viper.SetConfigType("env")
-	viper.SetConfigName("config")
-	viper.AddConfigPath("./configs/")
-	// viper.SetConfigFile("config.env")
+	// viper.SetConfigType("env")
+	// viper.SetConfigName("config")
+	// viper.AddConfigPath("./configs/")
+	viper.SetConfigFile(".env")
 
 	if err := viper.ReadInConfig(); err != nil {
 		log.Warn(err)
