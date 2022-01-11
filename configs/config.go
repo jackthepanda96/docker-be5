@@ -45,13 +45,6 @@ func GetConfig() *AppConfig {
 
 func initConfig() *AppConfig {
 	var defaultConfig AppConfig
-	// defaultConfig.Port = 8000
-	// defaultConfig.Database.Driver = ""
-	// defaultConfig.Database.Name = ""
-	// defaultConfig.Database.Address = ""
-	// defaultConfig.Database.Port = 3306
-	// defaultConfig.Database.Username = ""
-	// defaultConfig.Database.Password = ""
 	defaultConfig.Port = 8000
 	defaultConfig.Driver = ""
 	defaultConfig.Name = ""
