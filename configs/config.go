@@ -36,12 +36,12 @@ func GetConfig() *AppConfig {
 func initConfig() *AppConfig {
 	var defaultConfig AppConfig
 	defaultConfig.Port = 8000
-	defaultConfig.Database.Driver = "mysql"
-	defaultConfig.Database.Name = "defal"
-	defaultConfig.Database.Address = "dbbe5.c7svlamncepc.ap-southeast-1.rds.amazonaws.com"
+	defaultConfig.Database.Driver = ""
+	defaultConfig.Database.Name = ""
+	defaultConfig.Database.Address = ""
 	defaultConfig.Database.Port = 3306
-	defaultConfig.Database.Username = "admin"
-	defaultConfig.Database.Password = "admin123"
+	defaultConfig.Database.Username = ""
+	defaultConfig.Database.Password = ""
 
 	viper.SetConfigType("yaml")
 	viper.SetConfigName("config")
