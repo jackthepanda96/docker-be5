@@ -1,8 +1,0 @@
-port: 8000
-database:
-  driver: "mysql"
-  name: "main_db"
-  address: "dbbe5.c7svlamncepc.ap-southeast-1.rds.amazonaws.com"
-  port: 3306
-  username: "admin"
-  password: "admin123"
