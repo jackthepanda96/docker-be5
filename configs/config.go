@@ -1,24 +1,12 @@
 package configs
 
 import (
-	"fmt"
 	"sync"
 
 	"github.com/labstack/gommon/log"
 	"github.com/spf13/viper"
 )
 
-// type AppConfig struct {
-// 	Port     int `yaml:"port"`
-// 	Database struct {
-// 		Driver   string `yaml:"driver"`
-// 		Name     string `yaml:"name"`
-// 		Address  string `yaml:"address"`
-// 		Port     int    `yaml:"port"`
-// 		Username string `yaml:"username"`
-// 		Password string `yaml:"password"`
-// 	}
-// }
 type AppConfig struct {
 	Port     int
 	Driver   string
@@ -53,9 +41,6 @@ func initConfig() *AppConfig {
 	defaultConfig.Username = ""
 	defaultConfig.Password = ""
 
-	// viper.SetConfigType("env")
-	// viper.SetConfigName("config")
-	// viper.AddConfigPath("./configs/")
 	viper.SetConfigFile(".env")
 
 	if err := viper.ReadInConfig(); err != nil {
@@ -69,6 +54,6 @@ func initConfig() *AppConfig {
 		log.Warn("failed to extract external config, use default value")
 		return &defaultConfig
 	}
-	fmt.Println(finalConfig)
+
 	return &finalConfig
 }
