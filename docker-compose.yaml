@@ -4,3 +4,8 @@ services:
     restart: always
     ports:
       - 8081:8000
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 9000:8080
