@@ -12,5 +12,5 @@ jobs:
     - uses: actions/first-interaction@v1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: 'Hi this is message from workflows'
-        pr-message: 'Hi thanks for your PR Request'
+        issue-message: 'ini pesan dari issue'
+        pr-message: 'ini pesan dari pull request'
